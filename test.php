@@ -1,6 +1,9 @@
 <?php
+require_once('config.php');
 
-echo "HELLo World";
+$v = array (
+    'testVariable' => "Wartość testowa"
+)
 
 
 ?>
