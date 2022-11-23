@@ -1,7 +1,8 @@
 
 <?php
+require_once('config.php');
 if(isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
-    require_once('config.php');
+
     
     $user = new User($_REQUEST['login'], $_REQUEST['password']);
     if($user->login()) {
