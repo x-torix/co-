@@ -10,11 +10,15 @@ Route::add('/', function(){
 });
 
 Route::add('/', function(){
-    echo "strona logowania";
+    //echo "strona logowania";
+    global $twig;
+    $twig->display('login.html.twig');
 });
 
 Route::add('/', function(){
-    echo "strona rejestracji";
+    //echo "strona rejestracji";
+    global $twig;
+    $twig->display('login.html.twig');
 });
 
 
