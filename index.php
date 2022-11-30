@@ -73,6 +73,6 @@ Route::add('/register', function(){
 
 
 
-Route::run('/coś');
+Route::run('/cos');
 
 ?>
