@@ -9,16 +9,16 @@ Route::add('/', function(){
     echo "strona główna";
 });
 
-Route::add('/', function(){
+Route::add('/login', function(){
     //echo "strona logowania";
     global $twig;
     $twig->display('login.html.twig');
 });
 
-Route::add('/', function(){
+Route::add('/register', function(){
     //echo "strona rejestracji";
     global $twig;
-    $twig->display('login.html.twig');
+    $twig->display('register.html.twig');
 });
 
 
