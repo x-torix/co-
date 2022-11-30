@@ -7,7 +7,7 @@ require_once('class/class.php');
 
 session_start();
 
-Route::add('/', function(){
+Route::add('/główna', function(){
     global $twig;
     $V = array();
     if(isset($_SESSION['auth']))
