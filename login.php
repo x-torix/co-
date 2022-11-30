@@ -13,7 +13,7 @@ if(isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
         $twig->display('message.html.twig', $v);
     } else {
         //echo "Błędny login lub hasło";
-        $twig->display('message.htm.twig', ['message'=> "Błędny login lub hasło"]);
+        $twig->display('message.html.twig', ['message'=> "Błędny login lub hasło"]);
     }
 } else {
     $twig->display('login.html.twig');
