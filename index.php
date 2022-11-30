@@ -8,14 +8,15 @@ require_once('class/class.php');
 session_start();
 
 Route::add('/', function(){
+    echo "cokolwiek";
     global $twig;
-    $V = array();
+    $v = array();
     if(isset($_SESSION['auth']))
         if($_SESSION['auth']){
             $user = $_SESSION['user'];
             $v['user'] = $user;
         }
-     $twig->display('home.html.twig', $v);
+    $twig->display('home.html.twig', $v);
 });
 
 Route::add('/login', function(){
