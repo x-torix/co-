@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 16 Lis 2022, 13:51
+-- Czas generowania: 30 Lis 2022, 14:23
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.0.19
 
@@ -31,8 +31,8 @@ CREATE TABLE `loginform` (
   `id` int(11) NOT NULL,
   `login` varchar(255) NOT NULL,
   `password` varchar(128) NOT NULL,
-  `first_name` varchar(32) NOT NULL,
-  `last_name` varchar(32) NOT NULL
+  `firstName` varchar(32) NOT NULL,
+  `lastName` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
