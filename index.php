@@ -33,6 +33,11 @@ Route::add('/login', function(){
 
 Route::add('/register', function(){
     global $twig;
+    $twig->display('register.html.twig');
+});
+
+Route::add('/register', function(){
+    global $twig;
     if(isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
         if(empty($_REQUEST['login']) || empty($_REQUEST['password'])
         || empty($_REQUEST['firstName']) || empty($_REQUEST['lastName'])) {
