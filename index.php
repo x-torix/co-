@@ -8,7 +8,6 @@ require_once('class/class.php');
 session_start();
 
 Route::add('/', function(){
-    echo "cokolwiek";
     global $twig;
     $v = array();
     if(isset($_SESSION['auth']))
