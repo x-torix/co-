@@ -5,8 +5,17 @@ use Steampixel\Route;
 require_once('config.php');
 require_once('class/class.php');
 
+session_start();
+
 Route::add('/', function(){
-    echo "strona główna";
+    global $twig;
+    $V = array();
+    if(isset($_SESSION['auth']))
+        if($_SESSION['auth']){
+            $user = $_SESSION['user'];
+            $v['user'] = $user;
+        }
+     $twig->display('home.html.twig', $v);
 });
 
 Route::add('/login', function(){
@@ -19,6 +28,7 @@ Route::add('/login', function(){
     if(isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
         $user = new User($_REQUEST['login'], $_REQUEST['password']);
         if($user->login()) {
+            $_SESSION['auth'] = true;
             $v = array(
                 'message' => "Zalogowano poprawnie użytkownika: ".$user->getName(),
             );
