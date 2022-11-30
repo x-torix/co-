@@ -29,7 +29,6 @@ Route::add('/login', function(){
     } else {
         die("nie otrzymano danych");
     }
-    $twig->display('login.html.twig');
 },'post');
 
 Route::add('/register', function(){
@@ -54,7 +53,6 @@ Route::add('/register', function(){
     }else {
         die("nie otrzymano danych");
     }
-    $twig->display('register.html.twig');
 },'post');
 
 
