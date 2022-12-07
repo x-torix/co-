@@ -28,6 +28,7 @@ Route::add('/login', function(){
         $user = new User($_REQUEST['login'], $_REQUEST['password']);
         if($user->login()) {
             $_SESSION['auth'] = true;
+            $_SESSION['user'] = $user;
             $v = array(
                 'message' => "Zalogowano poprawnie użytkownika: ".$user->getName(),
             );
@@ -68,6 +69,13 @@ Route::add('/register', function(){
         die("nie otrzymano danych");
     }
 },'post');
+
+Route::add('/logout', function() {
+    global $twig;
+    session_destroy();
+    $twig->display('message.html.twig', 
+                                ['message' => "Wylogowano poprawnie"]);
+});
 
 
 
