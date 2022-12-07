@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 30 Lis 2022, 14:23
+-- Czas generowania: 07 Gru 2022, 13:46
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.0.19
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `loginform`
+-- Struktura tabeli dla tabeli `4hploginform`
 --
 
-CREATE TABLE `loginform` (
+CREATE TABLE `4hploginform` (
   `id` int(11) NOT NULL,
   `login` varchar(255) NOT NULL,
   `password` varchar(128) NOT NULL,
@@ -40,20 +40,19 @@ CREATE TABLE `loginform` (
 --
 
 --
--- Indeksy dla tabeli `loginform`
+-- Indeksy dla tabeli `4hploginform`
 --
-ALTER TABLE `loginform`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `login` (`login`);
+ALTER TABLE `4hploginform`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT dla zrzuconych tabel
 --
 
 --
--- AUTO_INCREMENT dla tabeli `loginform`
+-- AUTO_INCREMENT dla tabeli `4hploginform`
 --
-ALTER TABLE `loginform`
+ALTER TABLE `4hploginform`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
