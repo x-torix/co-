@@ -3,7 +3,6 @@
 use Steampixel\Route;
 
 require_once('config.php');
-require_once('class/class.php');
 
 session_start();
 
