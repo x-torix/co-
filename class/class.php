@@ -76,7 +76,7 @@ class User {
     }
 
     public function save() : bool {
-        $q = "UPDATE user SET
+        $q = "UPDATE 4hploginform SET
                 firstName = ?,
                 lastName = ?
                 WHERE id = ?";
